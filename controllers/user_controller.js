@@ -6,7 +6,6 @@ const signUp = async (req, res) => {
   const error = validationResult(req);
   //if client not send proper data
   if (!error.isEmpty()) {
-    console.log(error);
     return res.status(401).json({ message: "Invalid credentials" });
   }
 

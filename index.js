@@ -26,7 +26,7 @@ app.use("/api/todo", todoRoutes);
 
 //default path
 app.get("/", (req, res) => {
-  res.status(404).json({ message: "Invalid path" });
+  res.status(404).json({ message: "Hello World" });
 });
 //starting server
 app.listen(PORT, () => {

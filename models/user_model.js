@@ -9,6 +9,17 @@ const userSchema = new db.Schema({
     type: String,
     required: true,
   },
+  todos: [
+    {
+      task: {
+        type: String,
+      },
+      time: {
+        type: Date,
+        default: Date.now(),
+      },
+    },
+  ],
 });
 const user = db.model("user", userSchema);
 module.exports = user;
